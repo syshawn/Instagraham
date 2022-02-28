@@ -1,0 +1,231 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #F9F9F9;
+	font-family: "Raleway";
+	font-size: 12px;
+}
+
+/*Navbar*/
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #ffffff;
+	box-shadow: 0 5px 10px 0 #F7F7F7, 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Logo*/
+.logo{
+	color: #000000;
+	letter-spacing: 2px;
+	font-size: 25px;
+	font-family: "Pacifico";
+	cursor: pointer;
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.navbar li{
+	list-style: none;
+	margin-left:300px;
+}
+
+.navbar a{
+	color: #000000;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/*Screen Adjustment*/
+@media screen and (max-width:1024px){
+	.navbar{
+		width: 60%;
+	}
+}
+
+
+@media screen and (max-width:768px){
+	body{
+		overflow-x: hidden;
+	}
+	
+	.navbar{
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background-color: #5D4954;
+		display: flex;
+		flex-direction: colum;
+		align-items: center;
+		width: 50%;
+		transform: translatex(100%);
+	}
+	
+	.navbar li{
+		opacity: 0;
+	}
+}
+
+/*Tooltips*/
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  	visibility: hidden;
+  	width: 100px;
+  	background-color: #F5F5F5;
+  	color: #AAAAAA;
+  	margin-top:15px;
+  	text-align: center;
+  	border-radius: 6px;
+  	padding: 5px 0;
+  	position: absolute;
+  	z-index: 1;
+  	top: -5px;
+  	right: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  	content: "";
+  	position: absolute;
+  	top: 50%;
+  	left: 100%;
+  	margin-top: -5px;
+  	border-width: 5px;
+  	border-style: solid;
+  	border-color: transparent transparent transparent #F5F5F5;
+}
+
+.tooltip:hover .tooltiptext {
+  	visibility: visible;
+}
+
+/*Boxes Design*/
+.column {
+	float: top;
+	padding: 10px;
+	height: 300px;
+	background-color: #ffffff;
+	margin: auto;
+}
+
+/*Box for the title*/
+.top {
+	display: flex;
+	justify-content: space-around;
+  	width: 566px;
+  	height: 40px;
+  	box-shadow: 0 15px 10px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+	border-bottom: 1px solid #EEEEEE;
+  	padding-top: 10px;
+}
+
+.imgdots {
+	cursor: pointer;
+}
+
+/*Dropdown Menu for Edit & Delete button*/
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #F9F9F9;
+	min-width: 80px;
+	overflow: auto;
+	box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 15px 15px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #3e8e41;
+}
+
+.show {display: block;}
+
+/*Box for the image*/
+.middle {
+  	width: 566px;
+  	height: 1080px
+  	box-shadow: 0 20px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+}
+
+/*Box for the comment*/
+.bottom {
+  	width: 566px;
+  	height: 80px;
+  	box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+  	padding-left: 30px;
+  	padding-top: 20px;
+}
+
+.column:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+}
+
+/* Back to top page */
+#topBtn {
+	display: none;
+  	position: fixed;
+  	bottom: 20px;
+  	right: 30px;
+  	z-index: 99;
+  	font-size: 25pt;
+  	border: none;
+  	outline: none;
+  	background-color: #F9F9F9;
+  	color: #000000;
+  	cursor: pointer;
+  	padding: 15px;
+  	border-radius: 50%;
+}
+
+/*Footer*/
+.footer {
+   	left: 0;
+   	bottom: 0;
+   	width: 100%;
+   	text-align: center;
+   	color: #989898;
+   	padding: 25px;
+}
+
+
+
+
